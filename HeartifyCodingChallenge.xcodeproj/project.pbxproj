@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		116F61CC25439102008F487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CB25439102008F487B /* AppDelegate.swift */; };
 		116F61CE25439102008F487B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CD25439102008F487B /* SceneDelegate.swift */; };
-		116F61D025439102008F487B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CF25439102008F487B /* ViewController.swift */; };
-		116F61D325439102008F487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116F61D125439102008F487B /* Main.storyboard */; };
+		116F61D025439102008F487B /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CF25439102008F487B /* OnboardingController.swift */; };
 		116F61D525439103008F487B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 116F61D425439103008F487B /* Assets.xcassets */; };
 		116F61D825439103008F487B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116F61D625439103008F487B /* LaunchScreen.storyboard */; };
+		116F61EB25439BF8008F487B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 116F61EA25439BF8008F487B /* Main.storyboard */; };
+		116F61EF25439C7C008F487B /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61EE25439C7C008F487B /* Extensions.swift */; };
+		116F61FA2543A468008F487B /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61F92543A468008F487B /* MainTabBarController.swift */; };
+		116F62472543D8E6008F487B /* CardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F62462543D8E6008F487B /* CardController.swift */; };
+		116F624B2543D8FE008F487B /* InfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F624A2543D8FE008F487B /* InfoController.swift */; };
+		116F62542543D9A4008F487B /* ThirdTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F62532543D9A4008F487B /* ThirdTabController.swift */; };
+		116F62572543D9B7008F487B /* FourthTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F62562543D9B7008F487B /* FourthTabController.swift */; };
+		116F625A2543D9C1008F487B /* FifthTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F62592543D9C1008F487B /* FifthTabController.swift */; };
+		116F625F2543F039008F487B /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F625E2543F039008F487B /* CardCell.swift */; };
+		C5C75F0B382EB5B72F564944 /* Pods_HeartifyCodingChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB69F7BB44E801C2FEB7263B /* Pods_HeartifyCodingChallenge.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		104758ED34F19AA878E86B9C /* Pods-HeartifyCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartifyCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-HeartifyCodingChallenge/Pods-HeartifyCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		116F61C825439102008F487B /* HeartifyCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartifyCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116F61CB25439102008F487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116F61CD25439102008F487B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		116F61CF25439102008F487B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		116F61D225439102008F487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		116F61CF25439102008F487B /* OnboardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingController.swift; sourceTree = "<group>"; };
 		116F61D425439103008F487B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		116F61D725439103008F487B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		116F61D925439103008F487B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		116F61EA25439BF8008F487B /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		116F61EE25439C7C008F487B /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		116F61F92543A468008F487B /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		116F62462543D8E6008F487B /* CardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardController.swift; sourceTree = "<group>"; };
+		116F624A2543D8FE008F487B /* InfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoController.swift; sourceTree = "<group>"; };
+		116F62532543D9A4008F487B /* ThirdTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdTabController.swift; sourceTree = "<group>"; };
+		116F62562543D9B7008F487B /* FourthTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthTabController.swift; sourceTree = "<group>"; };
+		116F62592543D9C1008F487B /* FifthTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthTabController.swift; sourceTree = "<group>"; };
+		116F625E2543F039008F487B /* CardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		D0F018B0F1AC7F7C822F4776 /* Pods-HeartifyCodingChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartifyCodingChallenge.debug.xcconfig"; path = "Target Support Files/Pods-HeartifyCodingChallenge/Pods-HeartifyCodingChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		DB69F7BB44E801C2FEB7263B /* Pods_HeartifyCodingChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HeartifyCodingChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5C75F0B382EB5B72F564944 /* Pods_HeartifyCodingChallenge.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F79C0402BA52DD2F2FE3084 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0F018B0F1AC7F7C822F4776 /* Pods-HeartifyCodingChallenge.debug.xcconfig */,
+				104758ED34F19AA878E86B9C /* Pods-HeartifyCodingChallenge.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		116F61BF25439102008F487B = {
 			isa = PBXGroup;
 			children = (
 				116F61CA25439102008F487B /* HeartifyCodingChallenge */,
 				116F61C925439102008F487B /* Products */,
+				0F79C0402BA52DD2F2FE3084 /* Pods */,
+				6306CE4DA81694312A0FE204 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,15 +88,87 @@
 		116F61CA25439102008F487B /* HeartifyCodingChallenge */ = {
 			isa = PBXGroup;
 			children = (
+				116F61E22543988D008F487B /* Model */,
+				116F61E6254398D4008F487B /* View */,
+				116F61E7254398DA008F487B /* ViewModel */,
+				116F61E5254398CC008F487B /* Controller */,
+				116F61E8254398E7008F487B /* API */,
+				116F61ED25439C6C008F487B /* Utils */,
 				116F61CB25439102008F487B /* AppDelegate.swift */,
 				116F61CD25439102008F487B /* SceneDelegate.swift */,
-				116F61CF25439102008F487B /* ViewController.swift */,
-				116F61D125439102008F487B /* Main.storyboard */,
 				116F61D425439103008F487B /* Assets.xcassets */,
 				116F61D625439103008F487B /* LaunchScreen.storyboard */,
 				116F61D925439103008F487B /* Info.plist */,
+				116F61EA25439BF8008F487B /* Main.storyboard */,
 			);
 			path = HeartifyCodingChallenge;
+			sourceTree = "<group>";
+		};
+		116F61E22543988D008F487B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		116F61E5254398CC008F487B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				116F62452543D8CA008F487B /* Tabs */,
+				116F61CF25439102008F487B /* OnboardingController.swift */,
+				116F61F92543A468008F487B /* MainTabBarController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		116F61E6254398D4008F487B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				116F625E2543F039008F487B /* CardCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		116F61E7254398DA008F487B /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		116F61E8254398E7008F487B /* API */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		116F61ED25439C6C008F487B /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				116F61EE25439C7C008F487B /* Extensions.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		116F62452543D8CA008F487B /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				116F62462543D8E6008F487B /* CardController.swift */,
+				116F624A2543D8FE008F487B /* InfoController.swift */,
+				116F62532543D9A4008F487B /* ThirdTabController.swift */,
+				116F62562543D9B7008F487B /* FourthTabController.swift */,
+				116F62592543D9C1008F487B /* FifthTabController.swift */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		6306CE4DA81694312A0FE204 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DB69F7BB44E801C2FEB7263B /* Pods_HeartifyCodingChallenge.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +178,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 116F61DC25439103008F487B /* Build configuration list for PBXNativeTarget "HeartifyCodingChallenge" */;
 			buildPhases = (
+				05F2A4D4E57855E605608B49 /* [CP] Check Pods Manifest.lock */,
 				116F61C425439102008F487B /* Sources */,
 				116F61C525439102008F487B /* Frameworks */,
 				116F61C625439102008F487B /* Resources */,
+				8DD32F285F21C90615CFDFE6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -124,36 +230,78 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				116F61EB25439BF8008F487B /* Main.storyboard in Resources */,
 				116F61D825439103008F487B /* LaunchScreen.storyboard in Resources */,
 				116F61D525439103008F487B /* Assets.xcassets in Resources */,
-				116F61D325439102008F487B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05F2A4D4E57855E605608B49 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HeartifyCodingChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DD32F285F21C90615CFDFE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeartifyCodingChallenge/Pods-HeartifyCodingChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HeartifyCodingChallenge/Pods-HeartifyCodingChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HeartifyCodingChallenge/Pods-HeartifyCodingChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		116F61C425439102008F487B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				116F61D025439102008F487B /* ViewController.swift in Sources */,
+				116F62472543D8E6008F487B /* CardController.swift in Sources */,
+				116F625A2543D9C1008F487B /* FifthTabController.swift in Sources */,
+				116F62542543D9A4008F487B /* ThirdTabController.swift in Sources */,
+				116F61D025439102008F487B /* OnboardingController.swift in Sources */,
+				116F624B2543D8FE008F487B /* InfoController.swift in Sources */,
 				116F61CC25439102008F487B /* AppDelegate.swift in Sources */,
 				116F61CE25439102008F487B /* SceneDelegate.swift in Sources */,
+				116F625F2543F039008F487B /* CardCell.swift in Sources */,
+				116F61EF25439C7C008F487B /* Extensions.swift in Sources */,
+				116F62572543D9B7008F487B /* FourthTabController.swift in Sources */,
+				116F61FA2543A468008F487B /* MainTabBarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		116F61D125439102008F487B /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				116F61D225439102008F487B /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		116F61D625439103008F487B /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -283,12 +431,14 @@
 		};
 		116F61DD25439103008F487B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0F018B0F1AC7F7C822F4776 /* Pods-HeartifyCodingChallenge.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8Z6DLFKLR;
 				INFOPLIST_FILE = HeartifyCodingChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +452,14 @@
 		};
 		116F61DE25439103008F487B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 104758ED34F19AA878E86B9C /* Pods-HeartifyCodingChallenge.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = N8Z6DLFKLR;
 				INFOPLIST_FILE = HeartifyCodingChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
