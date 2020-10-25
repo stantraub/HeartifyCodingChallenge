@@ -11,9 +11,7 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         configureViewControllers()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,8 +20,6 @@ class MainTabBarController: UITabBarController {
     }
     
     private func configureViewControllers() {
-        view.backgroundColor = .white
-    
         let card = templateNavigationController(image: UIImage(systemName: "play.rectangle.fill")!, title: "Card", rootViewController: CardController())
         let info = templateNavigationController(image: UIImage(systemName: "info.circle")!, title: "Info", rootViewController: InfoController())
         let thirdTab = templateNavigationController(image: UIImage(systemName: "music.mic")!, title: "Tab 3", rootViewController: ThirdTabController())
@@ -31,7 +27,6 @@ class MainTabBarController: UITabBarController {
         let fifthTab = templateNavigationController(image: UIImage(systemName: "music.note.house")!, title: "Tab 5", rootViewController: FifthTabController())
         
         viewControllers = [card, info, thirdTab, fourthTab, fifthTab]
-        
         tabBar.tintColor = .label
     }
     

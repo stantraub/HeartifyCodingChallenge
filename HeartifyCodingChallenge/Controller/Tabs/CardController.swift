@@ -7,6 +7,7 @@
 
 import UIKit
 import iCarousel
+import JGProgressHUD
 
 class CardController: UIViewController {
     
@@ -56,23 +57,24 @@ class CardController: UIViewController {
     
     private func configureAlert(with title: String) {
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
-            self?.dismiss(animated: true, completion: nil)
+        let dismissAction = UIAlertAction(title: "OK", style: .default) { _ in
+            print("OK pressed")
         }
         
         alert.addAction(dismissAction)
         present(alert, animated: true, completion: nil)
     }
     
-    
-  
-    
     //MARK: - API
     
     private func fetchRingtones() {
+        let hud = JGProgressHUD()
+        hud.show(in: view)
+        
         Service.fetchRingtones { cards, error in
             guard let cards = cards else { return }
             self.cards = cards
+            hud.dismiss()
             
             DispatchQueue.main.async {
                 self.cardCarousel.reloadData()
@@ -89,7 +91,6 @@ extension CardController: iCarouselDataSource {
     }
     
     func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
-
         let cardWidth = self.view.frame.width * 0.8
         let cardHeight = self.view.frame.height * 0.4
         let view = CardCell(frame: CGRect(x: 0, y: 400, width: cardWidth, height: cardHeight))

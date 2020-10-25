@@ -94,7 +94,6 @@
 			children = (
 				116F61E22543988D008F487B /* Model */,
 				116F61E6254398D4008F487B /* View */,
-				116F61E7254398DA008F487B /* ViewModel */,
 				116F61E5254398CC008F487B /* Controller */,
 				116F61E8254398E7008F487B /* API */,
 				116F61ED25439C6C008F487B /* Utils */,
@@ -132,13 +131,6 @@
 				116F625E2543F039008F487B /* CardCell.swift */,
 			);
 			path = View;
-			sourceTree = "<group>";
-		};
-		116F61E7254398DA008F487B /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		116F61E8254398E7008F487B /* API */ = {

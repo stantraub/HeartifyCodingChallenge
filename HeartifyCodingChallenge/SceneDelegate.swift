@@ -21,8 +21,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
             UserDefaults.standard.set(true, forKey: "LaunchedBefore")
         } else {
             window?.rootViewController = MainTabBarController()
-
         }
+        
         window?.makeKeyAndVisible()
         
     }
