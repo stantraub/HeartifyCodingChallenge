@@ -204,3 +204,12 @@ extension UIView {
     }
 }
 
+extension UINavigationBar {
+    func configureNavBarTitle(with title: String) {
+        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
+        self.titleTextAttributes = textAttributes
+        self.prefersLargeTitles = true
+        self.topItem?.title = title
+    }
+}
+

@@ -38,3 +38,14 @@ class MainTabBarController: UITabBarController {
         return nav
     }
 }
+
+extension MainTabBarController: CardControllerDelegate {
+    func didSelectCardWithTitle(title: String) {
+        print(title)
+
+        guard let infoTab = viewControllers?[1] as? InfoController else { return }
+        infoTab.lastSelectedCardLabel.text = title
+    }
+    
+    
+}

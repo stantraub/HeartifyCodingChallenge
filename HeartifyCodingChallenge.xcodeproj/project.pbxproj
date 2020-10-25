@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		115854BE25451E270093D956 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115854BD25451E270093D956 /* Card.swift */; };
+		115854C1254530EF0093D956 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 115854C0254530EF0093D956 /* Service.swift */; };
 		116F61CC25439102008F487B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CB25439102008F487B /* AppDelegate.swift */; };
 		116F61CE25439102008F487B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CD25439102008F487B /* SceneDelegate.swift */; };
 		116F61D025439102008F487B /* OnboardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F61CF25439102008F487B /* OnboardingController.swift */; };
@@ -26,6 +28,8 @@
 
 /* Begin PBXFileReference section */
 		104758ED34F19AA878E86B9C /* Pods-HeartifyCodingChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HeartifyCodingChallenge.release.xcconfig"; path = "Target Support Files/Pods-HeartifyCodingChallenge/Pods-HeartifyCodingChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		115854BD25451E270093D956 /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		115854C0254530EF0093D956 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		116F61C825439102008F487B /* HeartifyCodingChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HeartifyCodingChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		116F61CB25439102008F487B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		116F61CD25439102008F487B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +111,7 @@
 		116F61E22543988D008F487B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				115854BD25451E270093D956 /* Card.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 		116F61E8254398E7008F487B /* API */ = {
 			isa = PBXGroup;
 			children = (
+				115854C0254530EF0093D956 /* Service.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -286,12 +292,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				116F62472543D8E6008F487B /* CardController.swift in Sources */,
+				115854C1254530EF0093D956 /* Service.swift in Sources */,
 				116F625A2543D9C1008F487B /* FifthTabController.swift in Sources */,
 				116F62542543D9A4008F487B /* ThirdTabController.swift in Sources */,
 				116F61D025439102008F487B /* OnboardingController.swift in Sources */,
 				116F624B2543D8FE008F487B /* InfoController.swift in Sources */,
 				116F61CC25439102008F487B /* AppDelegate.swift in Sources */,
 				116F61CE25439102008F487B /* SceneDelegate.swift in Sources */,
+				115854BE25451E270093D956 /* Card.swift in Sources */,
 				116F625F2543F039008F487B /* CardCell.swift in Sources */,
 				116F61EF25439C7C008F487B /* Extensions.swift in Sources */,
 				116F62572543D9B7008F487B /* FourthTabController.swift in Sources */,

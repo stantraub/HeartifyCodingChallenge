@@ -18,10 +18,7 @@ class FourthTabController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.topItem?.title = "Tab 4"
+        navigationController?.navigationBar.configureNavBarTitle(with: "Tab 4")
     }
     
     //MARK: - Helpers

@@ -11,6 +11,14 @@ class InfoController: UIViewController {
     
     //MARK: - Properties
     
+    var lastSelectedCardLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Last selected card here"
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.textColor = .label
+        return label
+    }()
+    
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
@@ -18,12 +26,12 @@ class InfoController: UIViewController {
         
         view.backgroundColor = .systemBackground
         
-        let textAttributes = [NSAttributedString.Key.foregroundColor: UIColor.label]
-        navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationController?.navigationBar.prefersLargeTitles = true
-        navigationController?.navigationBar.topItem?.title = "Info"
+        navigationController?.navigationBar.configureNavBarTitle(with: "Info")
+        
+        view.addSubview(lastSelectedCardLabel)
+        lastSelectedCardLabel.centerX(inView: view)
+        lastSelectedCardLabel.centerY(inView: view)
     }
     
     //MARK: - Helpers
 }
-

@@ -30,7 +30,7 @@ class OnboardingController: UIViewController {
         
         view.addSubview(continueButton)
         continueButton.centerX(inView: view)
-        continueButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor)
+        continueButton.anchor(bottom: view.safeAreaLayoutGuide.bottomAnchor, paddingBottom: 16)
         continueButton.setDimensions(height: 50, width: 175)
     }
     
