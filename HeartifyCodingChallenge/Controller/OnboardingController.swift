@@ -9,21 +9,27 @@ import UIKit
 
 class OnboardingController: UIViewController {
     
+    //MARK: - Properties
+    
     private lazy var continueButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Continue", for: .normal)
-        button.setTitleColor(.label, for: .normal)
-        button.titleLabel?.font = UIFont(name: "Avenir-Heavy", size: 18)
-        button.backgroundColor = .systemBackground
+        button.setTitleColor(.black, for: .normal)
+        button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
+        button.backgroundColor = .white
         button.layer.cornerRadius = 12
         button.addTarget(self, action: #selector(handleContinueTappped), for: .touchUpInside)
         return button
     }()
+    
+    //MARK: - Lifecycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
     }
+    
+    //MARK: - Helpers
     
     private func configureUI() {
         view.backgroundColor = .systemBlue
@@ -34,15 +40,13 @@ class OnboardingController: UIViewController {
         continueButton.setDimensions(height: 50, width: 175)
     }
     
+    //MARK: - Actions
+    
     @objc private func handleContinueTappped() {
         let vc = MainTabBarController()
         let nav = UINavigationController(rootViewController: vc)
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
-        
-
     }
-
-
 }
 

@@ -11,13 +11,19 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         configureViewControllers()
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     private func configureViewControllers() {
         view.backgroundColor = .white
-                
+    
         let card = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Card", rootViewController: CardController())
         let info = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Info", rootViewController: InfoController())
         let thirdTab = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Tab 3", rootViewController: ThirdTabController())
@@ -37,15 +43,4 @@ class MainTabBarController: UITabBarController {
         nav.tabBarItem.image = image
         return nav
     }
-}
-
-extension MainTabBarController: CardControllerDelegate {
-    func didSelectCardWithTitle(title: String) {
-        print(title)
-
-        guard let infoTab = viewControllers?[1] as? InfoController else { return }
-        infoTab.lastSelectedCardLabel.text = title
-    }
-    
-    
 }

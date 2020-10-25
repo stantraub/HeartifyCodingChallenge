@@ -7,15 +7,9 @@
 
 import UIKit
 
-protocol CardControllerDelegate: class {
-    func didSelectCardWithTitle(title: String)
-}
-
 class CardController: UIViewController {
     
     //MARK: - Properties
-    
-    weak var delegate: CardControllerDelegate?
     
     var cards = [Card]()
     
@@ -58,6 +52,16 @@ class CardController: UIViewController {
         infoVC.lastSelectedCardLabel.text = title
     }
     
+    private func configureAlert(with title: String) {
+        let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
+        let dismissAction = UIAlertAction(title: "OK", style: .default) { [weak self] _ in
+            self?.dismiss(animated: true, completion: nil)
+        }
+        
+        alert.addAction(dismissAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
     //MARK: - API
     
     private func fetchRingtones() {
@@ -90,6 +94,7 @@ extension CardController: UICollectionViewDataSource, UICollectionViewDelegate {
         let card = cards[indexPath.row]
         guard let title = card.title else { return }
         passTitleToInfoController(with: title)
+        configureAlert(with: title)
     }
 }
 
