@@ -10,7 +10,7 @@ import SDWebImage
 
 
 
-class CardCell: UICollectionViewCell {
+class CardCell: UIView {
     
     //MARK: - Properties
     
@@ -22,6 +22,11 @@ class CardCell: UICollectionViewCell {
             descriptionLabel.text = data.description
         }
     }
+
+    private let containerView: UIView = {
+        let view = UIView()
+        return view
+    }()
     
     private lazy var backgroundImage: UIImageView = {
         let iv = UIImageView()
@@ -30,7 +35,7 @@ class CardCell: UICollectionViewCell {
         return iv
     }()
     
-    private lazy var titleLabel: UILabel = {
+    private let titleLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 40)
         label.text = "Ringtone Title"
@@ -39,7 +44,7 @@ class CardCell: UICollectionViewCell {
         return label
     }()
     
-    private lazy var descriptionLabel: UILabel = {
+    private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.font = UIFont.systemFont(ofSize: 20)
         label.textColor = .lightGray
@@ -48,8 +53,6 @@ class CardCell: UICollectionViewCell {
     }()
     
     private let gradientLayer = CAGradientLayer()
-    
-    static let identifier = "CardCell"
     
     //MARK: - Lifecycle
     
@@ -78,6 +81,14 @@ class CardCell: UICollectionViewCell {
             height: frame.height
         )
         
+        addSubview(containerView)
+        containerView.frame = CGRect(
+            x: 0,
+            y: 0,
+            width: frame.width,
+            height: frame.height
+        )
+        
         configureGradient()
         configureInfoStack()
     }
@@ -85,8 +96,8 @@ class CardCell: UICollectionViewCell {
     private func configureGradient() {
         gradientLayer.colors = [UIColor.clear.cgColor, UIColor.black.cgColor]
         gradientLayer.locations = [0.5, 1]
-        gradientLayer.frame = contentView.frame
-        contentView.layer.addSublayer(gradientLayer)
+        gradientLayer.frame = containerView.frame
+        containerView.layer.addSublayer(gradientLayer)
     }
     
     private func configureInfoStack() {

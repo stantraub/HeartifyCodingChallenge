@@ -24,11 +24,11 @@ class MainTabBarController: UITabBarController {
     private func configureViewControllers() {
         view.backgroundColor = .white
     
-        let card = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Card", rootViewController: CardController())
-        let info = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Info", rootViewController: InfoController())
-        let thirdTab = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Tab 3", rootViewController: ThirdTabController())
+        let card = templateNavigationController(image: UIImage(systemName: "play.rectangle.fill")!, title: "Card", rootViewController: CardController())
+        let info = templateNavigationController(image: UIImage(systemName: "info.circle")!, title: "Info", rootViewController: InfoController())
+        let thirdTab = templateNavigationController(image: UIImage(systemName: "music.mic")!, title: "Tab 3", rootViewController: ThirdTabController())
         let fourthTab = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Tab 4", rootViewController: FourthTabController())
-        let fifthTab = templateNavigationController(image: UIImage(systemName: "music.note.list")!, title: "Tab 5", rootViewController: FifthTabController())
+        let fifthTab = templateNavigationController(image: UIImage(systemName: "music.note.house")!, title: "Tab 5", rootViewController: FifthTabController())
         
         viewControllers = [card, info, thirdTab, fourthTab, fifthTab]
         

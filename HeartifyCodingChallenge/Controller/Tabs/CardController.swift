@@ -1,11 +1,12 @@
 //
-//  CardTabViewController.swift
+//  Carousel.swift
 //  HeartifyCodingChallenge
 //
-//  Created by Stanley Traub on 10/23/20.
+//  Created by Stanley Traub on 10/25/20.
 //
 
 import UIKit
+import iCarousel
 
 class CardController: UIViewController {
     
@@ -13,27 +14,19 @@ class CardController: UIViewController {
     
     var cards = [Card]()
     
-    private lazy var collectionView: UICollectionView = {
-        let frame = CGRect(x: 0, y: (view.frame.height / 2) - (view.frame.height * 0.4 / 2), width: view.frame.width, height: view.frame.height * 0.4)
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 25
-        layout.itemSize = CGSize(width: view.frame.width * 0.8, height: view.frame.height * 0.4)
-        
-        let cv = UICollectionView(frame: frame, collectionViewLayout: layout)
-        cv.showsHorizontalScrollIndicator = false
-        cv.backgroundColor = .systemBackground
-        cv.delegate = self
-        cv.dataSource = self
-        cv.register(CardCell.self, forCellWithReuseIdentifier: CardCell.identifier)
-        
-        return cv
+    private let cardCarousel: iCarousel = {
+        let view = iCarousel()
+        view.type = .coverFlow
+//        view.scrollToItem(at: 0, animated: true)
+//        view.autoscroll = -0.4
+        return view
     }()
     
     //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         fetchRingtones()
         configureUI()
     }
@@ -43,7 +36,16 @@ class CardController: UIViewController {
     private func configureUI() {
         navigationController?.navigationBar.configureNavBarTitle(with: "Card")
         view.backgroundColor = .systemBackground
-        view.addSubview(collectionView)
+//        view.addSubview(collectionView)
+        configureCarousel()
+    }
+    
+    private func configureCarousel() {
+        view.addSubview(cardCarousel)
+        let centerY = (view.frame.height / 2) - (view.frame.height * 0.4 / 2)
+        cardCarousel.frame = CGRect(x: 0, y: centerY, width: view.frame.width, height: view.frame.height * 0.4)
+        cardCarousel.dataSource = self
+        cardCarousel.delegate = self
     }
     
     private func passTitleToInfoController(with title: String) {
@@ -62,6 +64,9 @@ class CardController: UIViewController {
         present(alert, animated: true, completion: nil)
     }
     
+    
+  
+    
     //MARK: - API
     
     private func fetchRingtones() {
@@ -70,39 +75,34 @@ class CardController: UIViewController {
             self.cards = cards
             
             DispatchQueue.main.async {
-                self.collectionView.reloadData()
+                self.cardCarousel.reloadData()
             }
         }
     }
 }
 
-//MARK: - UICollectionViewDataSource
+//MARK: - iCarouselDataSource
 
-extension CardController: UICollectionViewDataSource, UICollectionViewDelegate {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+extension CardController: iCarouselDataSource {
+    func numberOfItems(in carousel: iCarousel) -> Int {
         return cards.count
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let card = cards[indexPath.row]
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CardCell.identifier, for: indexPath) as! CardCell
-        cell.data = card
-        return cell
+    func carousel(_ carousel: iCarousel, viewForItemAt index: Int, reusing view: UIView?) -> UIView {
+
+        let cardWidth = self.view.frame.width * 0.8
+        let cardHeight = self.view.frame.height * 0.4
+        let view = CardCell(frame: CGRect(x: 0, y: 400, width: cardWidth, height: cardHeight))
+        view.data = cards[index]
+        return view
     }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let card = cards[indexPath.row]
+}
+
+extension CardController: iCarouselDelegate {
+    func carousel(_ carousel: iCarousel, didSelectItemAt index: Int) {
+        let card = cards[index]
         guard let title = card.title else { return }
         passTitleToInfoController(with: title)
         configureAlert(with: title)
     }
 }
-
-//MARK: - UICollectionViewDelegateFlowLayout
-
-extension CardController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
-    }
-}
-
