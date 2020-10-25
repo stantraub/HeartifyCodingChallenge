@@ -17,8 +17,9 @@ class CardController: UIViewController {
     private let cardCarousel: iCarousel = {
         let view = iCarousel()
         view.type = .coverFlow
-//        view.scrollToItem(at: 0, animated: true)
-//        view.autoscroll = -0.4
+        view.setupShadow(opacity: 0.9, radius: 12, offset: CGSize(width: view.frame.width, height: 7), color: .darkGray)
+        view.scrollToItem(at: 0, animated: true)
+        view.autoscroll = -0.4
         return view
     }()
     
@@ -36,7 +37,6 @@ class CardController: UIViewController {
     private func configureUI() {
         navigationController?.navigationBar.configureNavBarTitle(with: "Card")
         view.backgroundColor = .systemBackground
-//        view.addSubview(collectionView)
         configureCarousel()
     }
     
