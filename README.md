@@ -13,8 +13,7 @@
 $ git clone https://github.com/stantraub/HeartifyCodingChallenge.git
 $ cd HeartifyCodingChallenge/
 $ pod install
-$ open .
-Open HeartifyCodingChallenge.xcworkspace
+$ open HeartifyCodingChallenge.xcworkspace
 ```
 
 ## Technologies Used
